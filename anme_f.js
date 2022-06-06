@@ -5,7 +5,6 @@ var platform = navigator.platform
 var java = navigator.javaEnabled()
 var width = screen.width
 var height = screen.height
-var connect = navigator.connection.type
 var battery = navigator.getBattery().then(function(battery) {battery.level * 100;})
 var memory = navigator.deviceMemory
 var cores = navigator.hardwareConcurrency
@@ -15,9 +14,6 @@ var touch = navigator.maxTouchPoints
 var webdriv = navigator.webdriver
 var contacts = navigator.contacts
 var donot = navigator.doNotTrack
-var rtt = navigator.connection.rtt
-var ebwidth = navigator.connection.type
-var effectiveType = navigator.connection.effectiveType
 var refer = document.referrer
 var orientation = screen.orientation.type
 
